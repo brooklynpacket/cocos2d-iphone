@@ -98,7 +98,7 @@
 	// Add a mutex around to avoid the threads accessing the context simultaneously when resizing
 	CGLLockContext([[self openGLContext] CGLContextObj]);
 	
-	NSRect rect = [self bounds];
+	NSRect rect = [self convertRectToBacking:[self bounds]];
 	
 	CCDirector *director = [CCDirector sharedDirector];
 	[director reshapeProjection: NSSizeToCGSize(rect.size) ];
