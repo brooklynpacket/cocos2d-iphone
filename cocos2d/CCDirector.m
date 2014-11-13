@@ -291,7 +291,7 @@ static CCDirector *_sharedDirector = nil;
 		openGLView_ = [view retain];
 		
 		// set size
-		winSizeInPixels_ = winSizeInPoints_ = CCNSSizeToCGSize( [view bounds].size );
+		winSizeInPixels_ = winSizeInPoints_ = CCNSSizeToCGSize( [view convertRectToBacking:[view bounds]].size );
 
 		[self setGLDefaultValues];
 	}
