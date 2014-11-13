@@ -308,8 +308,7 @@
 - (CVReturn) getFrameForTime:(const CVTimeStamp*)outputTime
 {
 #if CC_DIRECTOR_MAC_USE_DISPLAY_LINK_THREAD
-	if( ! runningThread_ )
-		runningThread_ = [NSThread currentThread];
+	runningThread_ = [NSThread currentThread];
 	
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
