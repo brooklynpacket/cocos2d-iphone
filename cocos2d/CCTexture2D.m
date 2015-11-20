@@ -135,6 +135,9 @@ static CCTexture2DPixelFormat defaultAlphaPixelFormat_ = kCCTexture2DPixelFormat
 			case kCCTexture2DPixelFormat_RGBA8888:
 				glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei) width, (GLsizei) height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
 				break;
+			case kCCTexture2DPixelFormat_RGB888:
+				glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, (GLsizei) width, (GLsizei) height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+				break;
 			case kCCTexture2DPixelFormat_RGBA4444:
 				glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei) width, (GLsizei) height, 0, GL_RGBA, GL_UNSIGNED_SHORT_4_4_4_4, data);
 				break;
